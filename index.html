@@ -1,204 +1,134 @@
-<!DOCTYPE html>  <html lang="en">  
-<head>  
-  <meta charset="UTF-8" />  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
-  <title>Leo Nation Server</title>  
-  <style>  
-    body {  
-      margin: 0;  
-      font-family: 'Segoe UI', sans-serif;  
-      background-color: #1a1a1a;  
-      color: white;  
-      text-align: center;  
-      overflow-x: hidden;  
-    }  
-    header {  
-      padding: 40px 20px 20px;  
-      background-color: #2c2c2c;  
-      border-bottom: 4px solid #3d3d3d;  
-    }  
-    img.logo {  
-      width: 220px;  
-      height: auto;  
-      border-radius: 10px;  
-    }  
-    h1 {  
-      font-size: 3.5rem;  
-      margin: 20px 0 10px;  
-      color: #00BFFF;  
-      text-shadow: 2px 2px #000;  
-    }  
-    p.admin {  
-      font-size: 1.5rem;  
-      color: #ccc;  
-    }  
-    section {  
-      padding: 40px 20px;  
-      max-width: 800px;  
-      margin: 0 auto;  
-    }  
-    section h2 {  
-      color: #00ffcc;  
-      font-size: 2rem;  
-      margin-bottom: 10px;  
-    }  
-    section p {  
-      font-size: 1.2rem;  
-      line-height: 1.6;  
-    }  
-    ul.rank-list {  
-      list-style: none;  
-      padding: 0;  
-      font-size: 1.1rem;  
-      margin-top: 20px;  
-      text-align: left;  
-      display: inline-block;  
-    }  
-    a.btn, button.btn {  
-      display: inline-block;  
-      margin-top: 20px;  
-      padding: 12px 24px;  
-      background-color: #25D366;  
-      color: white;  
-      font-weight: bold;  
-      border-radius: 6px;  
-      text-decoration: none;  
-      transition: background 0.3s;  
-      border: none;  
-      cursor: pointer;  
-    }  
-    a.btn:hover, button.btn:hover {  
-      background-color: #1da851;  
-    }  
-    input, select {  
-      padding: 10px;  
-      font-size: 1rem;  
-      margin: 10px;  
-      border-radius: 5px;  
-      border: none;  
-      width: 80%;  
-      max-width: 300px;  
-    }  
-    .ip-info {  
-      margin-top: 20px;  
-      font-size: 1.1rem;  
-      color: #aaa;  
-    }  
-  </style>  
-</head>  
-<body>  
-  <header>  
-    <img class="logo" src="https://iili.io/FzIzqPa.jpg" alt="Leo Nation Logo" />  
-    <h1 style="color:#00BFFF">LEO NATION</h1>  
-    <p class="admin">OWNER: <strong>LEO GAMING3071</strong></p>  
-    <p class="admin">ADMIN: <strong>ALDRIC OP</strong></p>  
-    <p class="admin">ADMIN: <strong>NONE</strong></p>  
-    <p class="admin">ADMIN: <strong>NONE</strong></p>  
-  </header>    <section>  
-    <h2>Tentang Server</h2>  
-    <p>Leo Nation adalah server Minecraft yang dibuat dengan semangat komunitas dan petualangan. Server ini terbuka untuk semua pemain yang ingin membangun, menjelajah, dan bersenang-senang bersama.</p>  
-    <a class="btn" href="https://chat.whatsapp.com/EBBbvrsmYDgCGXZULiScK1" target="_blank">Gabung Grup WhatsApp</a>  
-    <div class="ip-info">  
-      <p><strong>Untuk Minecraft Bedrock dan Patched</strong></p>  
-      <p><strong>IP Server :</strong> leonation.xyz</p>  
-      <p><strong>Port :</strong> 19132</p>  
-      <p><strong>Tema :</strong> Survival</p>  
-    </div>  
-  </section>    <section>  
-    <h2>Tujuan Dibuat</h2>  
-    <p>Server ini dibuat untuk menyatukan pemain Minecraft dari berbagai tempat agar bisa bermain bareng, saling membantu, dan menciptakan dunia Minecraft yang seru dan kreatif. Kami ingin menciptakan komunitas yang ramah, aktif, dan menyenangkan!</p>  
-  </section>    <section>  
-    <h2>Harga Rank di Server</h2>  
-    <p>Semua rank berlaku selama 30 hari / 1 bulan</p>  
-    <ul class="rank-list">  
-      <li><strong>SUPPORTER</strong> = 5.000 RIBU</li>  
-      <li><strong>VIP</strong> = 10.000 RIBU</li>  
-      <li><strong>MVP</strong> = 20.000 RIBU</li>  
-      <li><strong>ELITE</strong> = 30.000 RIBU</li>  
-      <li><strong>MASTER</strong> = 40.000 RIBU</li>  
-      <li><strong>LEGENDS</strong> = 50.000 RIBU</li>  
-      <li><strong>MYTHIC</strong> = 60.000 RIBU</li>  
-      <li><strong>ULTRA</strong> = 70.000 RIBU</li>  
-      <li><strong>VENOM</strong> = 80.000 RIBU</li>  
-      <li><strong>IMMORTAL</strong> = 90.000 RIBU</li>  
-      <li><strong>MICHAEL</strong> = 100.000 RIBU</li>  
-    </ul>  
-  </section>  <section>  
-    <h2>SISTEM RANK SERVER</h2>  
-    <p>Rank di server leonation langganannya minimal 3 bulan, jika anda hanya membayar 1 bulan, dan tidak membayar 2 bulan sisanya, anda akan di kenakan band permanen/bulanan beli rank dibawah⬇️.</p>    <section>  
-    <h2>Beli Rank</h2>  
-    <p>Pilih rank dan masukkan gamertag kamu. Setelah itu klik tombol kirim untuk menghubungi admin lewat WhatsApp.</p>  
-    <form onsubmit="kirimPesan(); return false;">  
-      <select id="rank">  
-        <option value="SUPPORTER">SUPPORTER - Rp5.000</option>  
-        <option value="VIP">VIP - Rp10.000</option>  
-        <option value="MVP">MVP - Rp20.000</option>  
-        <option value="ELITE">ELITE - Rp30.000</option>  
-        <option value="MASTER">MASTER - Rp40.000</option>  
-        <option value="LEGENDS">LEGENDS - Rp50.000</option>  
-        <option value="MYTHIC">MYTHIC - Rp60.000</option>  
-        <option value="ULTRA">ULTRA - Rp70.000</option>  
-        <option value="VENOM">VENOM - Rp80.000</option>  
-        <option value="IMMORTAL">IMMORTAL - Rp90.000</option>  
-        <option value="MICHAEL">MICHAEL - Rp100.000</option>  
-      </select><br />  
-      <input type="text" id="gamertag" placeholder="Masukkan gamertag kamu" required /><br />  
-      <button class="btn" type="submit">Kirim</button>  
-    </form>  
-    <p style="margin-top: 20px; color: #ffcc00;"><strong> BAYAR PERBULAN / 30 HARI 1X</strong></p>  
-  </section>  <section>  
-    <h2>AKUN TIKTOK LEO</h2>  
-    <a class="btn" href="https://tiktok.com/@leogaming3071" target="_blank">LEO GAMING3071</a>  
-    <a class="btn" href="https://tiktok.com/@muhamadaprileosaputra" target="_blank">MUHAMADAPRILEOSAPUTRA(2)</a>  
-    <a class="btn" href="https://tiktok.com/@muhammadaprileosaputra" target="_blank">MUHAMMADAPRILEOSAPUTRA(3)</a>  
-</section> 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LEONATION Rank</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 400px;
+      margin: 40px auto;
+      background-color: #1e1e1e;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+    h1 {
+      text-align: center;
+      color: #00bfff;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+    input, select {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+      background-color: #fff;
+      color: #000;
+      box-sizing: border-box;
+    }
+    .btn {
+      width: 100%;
+      padding: 14px;
+      background-color: #25D366;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 25px;
+    }
+    .price {
+      margin-top: 20px;
+      font-size: 18px;
+      text-align: center;
+      color: #00e676;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>LEONATION</h1>
+    
+    <label for="player">Nama Player Minecraft:</label>
+    <input type="text" id="player" placeholder="Contoh: Steve_MC123">
 
-<section>  
-    <h2>AKUN SNACKVIDEO LEO</h2>  
-    <a class="btn" href="https://snackvideo.com/@leogaming3071" target="_blank">LEO GAMING3071</a>  </section>
-    <section>  
-    <h2>AKUN YOUTUBE LEO</h2>  
-    <a class="btn" href="https://youtube.com/@leogaming3071?si=EUFDJWwZAs1oVS-i" target="_blank">LEO GAMING3071</a>  </section>
-    <section>  
-    <h2>AKUN FACEBOOK LEO</h2>  
-    <a class="btn" href="https://www.facebook.com/muhamad.aprileo.saputra" target="_blank">MUHAMADAPRILEOSAPUTRA</a>  </section>
-    <section>  
-    <h2>SAWERIA</h2>  
-    <a class="btn" href="https://saweria.co/LEONATION" target="_blank">LEONATION</a>
-    <a class="btn" href="https://saweria.co/aldricop" target="_blank">YANG BIKIN WEB😁</a>
-    </section>
-    <script>  
-  function kirimPesan() {  
-    const gamertag = document.getElementById("gamertag").value;  
-    const rank = document.getElementById("rank").value;  
-    const hargaList = {  
-      SUPPORTER: 5000,  
-      VIP: 10000,  
-      MVP: 20000,  
-      ELITE: 30000,  
-      MASTER: 40000,  
-      LEGENDS: 50000,  
-      MYTHIC: 60000,  
-      ULTRA: 70000,  
-      VENOM: 80000,  
-      IMMORTAL: 90000,  
-      MICHAEL: 100000  
-    };  
-    const harga = hargaList[rank];  
-    const noAdmin = "6281361245418";  
-    const pesan = `Halo Admin, saya ingin membeli Rank ${rank} (Rp${harga.toLocaleString()}) untuk gamertag ${gamertag}`;  
-    const link = `https://wa.me/${noAdmin}?text=${encodeURIComponent(pesan)}`;  
-    window.open(link, '_blank');  
-  }  
-</script>  <!--Start of Tawk.to Script-->  <script type="text/javascript">  
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();  
-(function(){  
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];  
-s1.async=true;  
-s1.src='https://embed.tawk.to/68566725f4cfc5190e97e670/default';  
-s1.charset='UTF-8';  
-s1.setAttribute('crossorigin','*');  
-s0.parentNode.insertBefore(s1,s0);  
-})();  
-</script><!--End of Tawk.to Script-->  </body>  
-</html>  
+    <label for="rank">Pilih Rank:</label>
+    <select id="rank">
+      <option value="5000">SUPPORTER - 5.000 IDR</option>
+      <option value="10000">VIP - 10.000 IDR</option>
+      <option value="20000">MVP - 20.000 IDR</option>
+      <option value="30000">ELITE - 30.000 IDR</option>
+      <option value="40000">MASTER - 40.000 IDR</option>
+      <option value="50000">LEGENDS - 50.000 IDR</option>
+      <option value="60000">MYTHIC - 60.000 IDR</option>
+      <option value="70000">ULTRA - 70.000 IDR</option>
+      <option value="80000">VENOM - 80.000 IDR</option>
+      <option value="90000">IMMORTAL - 90.000 IDR</option>
+      <option value="100000">MICHAEL - 100.000 IDR</option>
+    </select>
+
+    <label for="duration">Pilih Masa Aktif Rank:</label>
+    <select id="duration">
+      <option value="1 BULAN / 30 HARI">1 BULAN / 30 HARI</option>
+    </select>
+
+    <div class="price" id="price">Total Harga Rank : 5.000 IDR</div>
+    <button class="btn" onclick="beli()">Beli via WhatsApp</button>
+  </div>
+
+  <script>
+    const rank = document.getElementById('rank');
+    const duration = document.getElementById('duration');
+    const price = document.getElementById('price');
+    const player = document.getElementById('player');
+
+    function formatRupiah(angka) {
+      return angka.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    }
+
+    function updateHarga() {
+      const harga = parseInt(rank.value);
+      price.textContent = "Total Harga Rank : " + formatRupiah(harga) + " IDR";
+    }
+
+    rank.addEventListener('change', updateHarga);
+
+    function beli() {
+      const namaPlayer = player.value.trim();
+      if (!namaPlayer) {
+        alert("Masukkan nama player dulu ya.");
+        return;
+      }
+
+      const selectedRank = rank.options[rank.selectedIndex].text.split(" - ")[0]; // ambil nama rank saja
+      const selectedDuration = duration.value;
+      const hargaRank = formatRupiah(parseInt(rank.value));
+
+      const message = `Halo Admin, saya ingin membeli rank:\n\nRank: ${selectedRank}\nMasa Aktif Rank : ${selectedDuration}\nNama Player : ${namaPlayer}\nTotal Harga Rank : ${hargaRank} IDR`;
+      const url = `https://wa.me/6285189826843?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+
+    // Set harga awal
+    updateHarga();
+  </script>
+</body>
+</html>
