@@ -61,16 +61,32 @@
       color: #00e676;
       font-weight: bold;
     }
+    .syarat {
+      margin-top: 30px;
+      background-color: #111;
+      padding: 20px;
+      border-radius: 12px;
+    }
+    .syarat h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: #00ff88;
+      text-align: center;
+    }
+    .syarat ol {
+      padding-left: 20px;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>LEONATION</h1>
     
-    <label for="player">Nama Player Minecraft:</label>
+    <label for="player">NAMA PLAYERS MINECARFT</label>
     <input type="text" id="player" placeholder="Contoh: Steve_MC123">
 
-    <label for="rank">Pilih Rank:</label>
+    <label for="rank">PILIH RANK</label>
     <select id="rank">
       <option value="5000">SUPPORTER - 5.000 IDR</option>
       <option value="10000">VIP - 10.000 IDR</option>
@@ -85,12 +101,22 @@
       <option value="100000">MICHAEL - 100.000 IDR</option>
     </select>
 
-    <label for="duration">Pilih Masa Aktif Rank:</label>
+    <label for="duration">PILIH MASA AKTIF RANK</label>
     <select id="duration">
       <option value="1 BULAN / 30 HARI">1 BULAN / 30 HARI</option>
     </select>
 
-    <div class="price" id="price">Total Harga Rank : 5.000 IDR</div>
+    <!-- Tambahan SYARAT PEMBELIAN -->
+    <div class="syarat">
+      <h3>SYARAT PEMBELIAN</h3>
+      <ol>
+        <li>HARUS ONLINE DI SERVER</li>
+        <li>SUDAH MELAKUKAN TRANSAKSI PEMBAYARAN</li>
+        <li>TUNGGU ADMIN LOGIN DI SERVER DAN NANTI ADMIN AKAN KASIH RANK YANG TELAH KAMU BELI</li>
+      </ol>
+    </div>
+
+    <div class="price" id="price">TOTAL HARGA RANK : 5.000 IDR</div>
     <button class="btn" onclick="beli()">Beli via WhatsApp</button>
   </div>
 
@@ -106,7 +132,7 @@
 
     function updateHarga() {
       const harga = parseInt(rank.value);
-      price.textContent = "Total Harga Rank : " + formatRupiah(harga) + " IDR";
+      price.textContent = "TOTAL HARGA RANK : " + formatRupiah(harga) + " IDR";
     }
 
     rank.addEventListener('change', updateHarga);
@@ -114,7 +140,7 @@
     function beli() {
       const namaPlayer = player.value.trim();
       if (!namaPlayer) {
-        alert("Masukkan nama player dulu ya.");
+        alert("MASUKAN NAMA PLAYERS ANDA DULU YA");
         return;
       }
 
@@ -122,7 +148,7 @@
       const selectedDuration = duration.value;
       const hargaRank = formatRupiah(parseInt(rank.value));
 
-      const message = `Halo Admin, saya ingin membeli rank:\n\nRank: ${selectedRank}\nMasa Aktif Rank : ${selectedDuration}\nNama Player : ${namaPlayer}\nTotal Harga Rank : ${hargaRank} IDR`;
+      const message = `HALO ADMIN, SAYA INGIN MEMBELI RANK :\n\nRANK : ${selectedRank}\nMASA AKTIF RANK : ${selectedDuration}\nNAMA PLAYERS : ${namaPlayer}\nTOTAL HARGA RANK : ${hargaRank} IDR`;
       const url = `https://wa.me/6285189826843?text=${encodeURIComponent(message)}`;
       window.open(url, '_blank');
     }
